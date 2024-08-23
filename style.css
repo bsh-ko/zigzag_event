@@ -1,0 +1,397 @@
+:root {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* reset */
+body, div, h1, h2, p, ul {
+  padding: unset;
+  margin: unset;
+}
+
+ul, li, a {
+  text-decoration: none;
+  list-style: none;
+}
+
+
+.l_wrapper {
+  display: grid;
+  place-items: center;
+}
+
+/* zigzag부분  */
+.zigzag_header {
+  padding-top: 90px;
+  display: flex;
+  /* gap: 30px; */
+  color: #C89DFF;
+  justify-self: start;
+}
+
+.zigzag_header h2{
+  color: white;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 44px;
+  min-width: 258px;
+}
+
+.zigzag_header .line::before {
+  content: "";
+  width: 90px;
+  height: 1px;
+  margin: 90px 30px;
+  display: inline-block;
+  background-color:#C89DFF;;
+}
+
+.zigzag_header p{
+  color: #C89DFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  max-width: 460px;
+  margin-top: 40px;
+}
+
+.zigzag_header span {
+  border: 2px solid unset;
+  width: fit-content;
+  text-align: center;
+  box-shadow: inset 0 -0.7em 0 0 rgb(255, 69, 0);
+}
+
+.zigzag {
+  background-color: #6230A2;
+  width: 100%;
+}
+
+
+.zigzag_contents {
+  display: flex;
+  background-color: white;
+  margin-bottom: 30px; 
+  flex: 1;
+}
+
+.zigzag_contents.two {
+  flex-direction: row-reverse;
+}
+
+.contents {
+  margin: 50px 0 100px;
+}
+
+.contents_header {
+  position: relative;
+  max-height: 148px;
+  overflow: hidden;
+  background: #6230A2;
+}
+
+.contents_header img {
+  max-width: 280px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  /* flex-shrink: 0; */
+  opacity: 0.5;
+}
+
+.contents_header {
+  position: relative;
+}
+
+.contents_header span {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 44px;
+}
+
+.description {
+  align-content: center;
+  padding-left: 30px;
+  max-width: 800px;
+  flex: 1;
+}
+
+.description p {
+  color: #6230A2;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 10px;
+}
+
+.description li {
+  color: #111;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative; 
+  padding-left: 30px;
+  line-height: 30px;
+}
+
+.description li::before {
+  content: '•'; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #C89DFF;
+  font-size: 50px; /* 점 크기 조절 */
+  line-height: 20px;
+}
+
+/* event부분 */
+.event {
+  background-color: #FFF5ED;
+  width: 100%;
+}
+
+.event_header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  min-width: 1080px;
+  margin: 100px 0;
+}
+
+.event_header h2 {
+  color: #F98173;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 44px
+}
+
+.effect {
+  font-weight: bold;
+  border: 2px solid unset;
+  width: fit-content;
+  text-align: center;
+  box-shadow: inset 0 -0.7em 0 0 white;
+}
+
+.event_header div {
+  padding: 5px 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  border-bottom: 4px rgba(0, 0, 0, 0.10);
+  background: #FF4500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10)
+}
+
+.event_header div a {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+}
+
+.event .l_card {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 800px;
+}
+
+.event .card {
+  max-width: 340px;
+  width: 100%; 
+  background-color: white;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.10);
+}
+
+.event .card .cover {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: solid 4px #111;
+  position: relative;
+  z-index: 1; /* cover의 z-index 설정, 배지보다 낮은 값 */
+}
+
+.event .card .badge {
+  position: absolute;
+  width: 110px;
+  z-index: 2;
+  transform: translate(-5%, -5%);
+}
+
+
+.event .card_contents {
+  display: flex;
+  flex-direction: column;  /* 자식 요소들을 세로로 배치 */
+  justify-content: space-between;  /* 상단과 하단에 요소 배치 */
+  margin: 20px;
+  height: 20em;
+  position: relative;
+}
+
+.event .hashtag {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.event .hashtag li {
+  padding: 2px 12px 3px 12px;
+  border-radius: 12px;
+  background-color: #EBDBFF;  
+  color: #6230A2;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.event h2 {
+  color: #111;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.event p {
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.event .status {
+  color: #999;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: auto;  /* 자동으로 가장 아래로 배치 */
+  min-height: 60px;
+  justify-content: space-between;
+}
+
+.event .status::before {
+  content: "";
+  display: block;
+  background-color: #eee;
+  width: 320px;
+  height: 4px;
+  margin-bottom: 20px;
+}
+
+.event .status p {
+  color: #999;
+  float: left;
+}
+
+.people {
+  display: flex;
+  float: right;
+  justify-content: flex-end; 
+}
+
+.person {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 5px solid #FFF;
+  margin-left: -13px;
+}
+
+
+/* 미디어 쿼리 */
+
+@media (max-width: 1080px) {
+  .zigzag_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .zigzag_header p {
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .zigzag_header .line::before {
+    content: none;
+  }
+
+  .zigzag_contents, .zigzag_contents.two  {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 100px;
+  }
+
+  .zigzag_contents img {
+    justify-content: center;
+    min-width: 100%;
+  }
+
+  .event .l_wrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .event_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    gap: 50px;
+    min-width: unset;
+  }
+  .event_header h2 {
+    font-size: 40px;
+    line-height: 36px;
+  }
+
+  .event_header div {
+    padding: 10px 10px;
+  }
+
+  .event .l_card {
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 100px;
+  }
+
+  .event .card {
+    max-width: 70vw;
+  }
+
+  .event .card_contents {
+    padding: 10px;
+  }
+
+  .event .status {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .event .status::before {
+    width: 60vw;
+  }
+
+  .event .status p {
+    margin-bottom: 10px;
+  }
+
+  .person {
+    width: 8vw;
+    height: auto;
+  }
+}
